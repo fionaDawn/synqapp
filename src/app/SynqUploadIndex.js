@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import SynqUploadButton from './SynqUploadButton'
-import SynqUploadFrame from './SynqUploadFrame'
-import {upload, list, play, wait} from './redux/uploadActions';
+import SynqUploadButton from './components/SynqUploadButton'
+import SynqUploadFrame from './components/SynqUploadFrame'
 
 const STATUS = {
   UPLOAD: 'create',
@@ -31,15 +30,6 @@ class SynqUploaderIndex extends Component {
     }
   }
 }
+
 const mapStateToProps = (state, ownProps) => ({uploader: state.uploader});
-
-const mapDispatchToProps = {
-  upload,
-  list,
-  play,
-  wait
-};
-
-const AppContainer = connect(mapStateToProps, mapDispatchToProps)(SynqUploaderIndex);
-
-export default AppContainer;
+export default connect(mapStateToProps)(SynqUploaderIndex)

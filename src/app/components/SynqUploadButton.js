@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {upload} from './redux/uploadActions';
+import {upload} from '../reducers/uploadActions';
 
 import CloudUploadIcon from 'material-ui/svg-icons/file/cloud-upload';
 import RaisedButton from 'material-ui/RaisedButton';
