@@ -15,11 +15,12 @@ export const config = {
 ```
 
 1. Open the project directory and run `npm install`
-1. Run `yarn start`
+2. Run `yarn start`
 
 ## Sample React App for Synq uploader
 
-Website should display list of video Ids. Clicking the upload button will create a new video id and display the synq uploader.
+1. Website should display list of video Ids. 
+2. Clicking the upload button will create a new video id and display the synq uploader.
 
 ## Features to be added
 
