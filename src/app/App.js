@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-// import SynqUploadIndex from './SynqUploadIndex'
 import SynqGallery from './components/SynqGallery'
+import SynqUploadButton from './components/SynqUploadButton'
 
 import {Provider} from 'react-redux';
-// import {store} from './reducers/uploadStore';
 import configureStore from './store/configureStore';
 
 import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles';
@@ -26,6 +25,7 @@ class App extends Component {
             <header className="App-header">
               <h1 className="App-title">Welcome to React</h1>
             </header>
+            <SynqUploadButton/>
             <SynqGallery/>
           </div>
         </MuiThemeProvider>

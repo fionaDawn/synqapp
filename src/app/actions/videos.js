@@ -1,8 +1,8 @@
 export function videosHaveErrored(bool) {
-  return {type: 'VIDEOS_HAVE_ERRORED', hasErrored: bool};
+  return {type: 'VIDEOS_HAVE_ERRORED', videosHaveErrored: bool};
 }
 export function videosAreLoading(bool) {
-  return {type: 'VIDEOS_ARE_LOADING', isLoading: bool};
+  return {type: 'VIDEOS_ARE_LOADING', videosAreLoading: bool};
 }
 export function videosFetchDataSuccess(videos) {
   return {type: 'VIDEOS_FETCH_DATA_SUCCESS', videos};
@@ -13,8 +13,7 @@ export function videosFetchData(url) {
     dispatch(videosAreLoading(true));
     fetch(url, {
       headers: {
-        "authorization": "Bearer QbE1bXQhRegEhSB5Ez/SMCkIJ9BTftvUdSGZofH8pFIeYFI6vX1aUWnX0jdjyOzC",
-        "content-type": "application/json"
+        "authorization": "Bearer QbE1bXQhRegEhSB5Ez/SMCkIJ9BTftvUdSGZofH8pFIeYFI6vX1aUWnX0jdjyOzC"
       }
     }).then((response) => {
       if (!response.ok) {
