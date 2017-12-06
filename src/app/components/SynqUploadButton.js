@@ -25,11 +25,11 @@ class SynqUploadButton extends Component {
 
     if (this.props.videoId) {
       return (<div>
-        <Iframe url={"https://synq-unicorn.herokuapp.com/uploader/" + this.props.videoId} width="450px" height="350px" display="initial" position="relative"/>
+        <Iframe url={this.props.uploaderUrl + this.props.videoId} width="450px" height="350px" display="initial" position="relative"/>
       </div>);
     } else {
       return (<div>
-        <RaisedButton label="UPLOAD" labelPosition="before" primary={true} icon={<CloudUploadIcon />} onClick={() => this.props.createVideo('http://synq-akka.nanoapp.io/v2/videos')} style={styles.button}/>
+        <RaisedButton label="UPLOAD" labelPosition="before" primary={true} icon={<CloudUploadIcon />} onClick={() => this.props.createVideo(this.props.apiUrl)} style={styles.button}/>
       </div>);
     }
 

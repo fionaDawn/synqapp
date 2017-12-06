@@ -1,3 +1,5 @@
+import {config} from '../config.js'
+
 export function videosHaveErrored(bool) {
   return {type: 'VIDEOS_HAVE_ERRORED', videosHaveErrored: bool};
 }
@@ -13,7 +15,7 @@ export function videosFetchData(url) {
     dispatch(videosAreLoading(true));
     fetch(url, {
       headers: {
-        "authorization": "Bearer QbE1bXQhRegEhSB5Ez/SMCkIJ9BTftvUdSGZofH8pFIeYFI6vX1aUWnX0jdjyOzC"
+        "authorization": config.apiToken
       }
     }).then((response) => {
       if (!response.ok) {

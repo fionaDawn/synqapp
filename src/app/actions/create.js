@@ -1,3 +1,5 @@
+import {config} from '../config.js'
+
 export function videoHasErrored(bool) {
   return {type: 'VIDEO_HAS_ERRORED', videoHasErrored: bool};
 }
@@ -14,7 +16,7 @@ export function videoCreate(url) {
     fetch(url, {
       method: "POST",
       headers: {
-        "authorization": "Bearer QbE1bXQhRegEhSB5Ez/SMCkIJ9BTftvUdSGZofH8pFIeYFI6vX1aUWnX0jdjyOzC",
+        "authorization": config.apiToken,
         "content-type": "application/json"
       }
     }).then((response) => {

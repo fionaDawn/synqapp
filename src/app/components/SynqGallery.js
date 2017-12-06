@@ -5,7 +5,7 @@ import {videosFetchData} from '../actions/videos';
 class SynqGallery extends Component {
 
   componentDidMount() {
-    this.props.fetchData('http://synq-akka.nanoapp.io/v2/videos');
+    this.props.fetchData(this.props.apiUrl);
   }
 
   render() {
