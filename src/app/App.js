@@ -7,6 +7,7 @@ import configureStore from './store/configureStore';
 import {config} from './config';
 
 import {MuiThemeProvider, getMuiTheme} from 'material-ui/styles';
+import AppBar from 'material-ui/AppBar';
 
 const apiUrl = config.apiUrl;
 
@@ -25,9 +26,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider muiTheme={muiTheme}>
           <div>
-            <header className="App-header">
-              <h1 className="App-title">Welcome to React</h1>
-            </header>
+            <AppBar showMenuIconButton={false} title="Synq Upload"/>
             <SynqUploadButton apiUrl={apiUrl} uploaderUrl={config.uploaderUrl}/>
             <SynqGallery apiUrl={apiUrl}/>
           </div>
