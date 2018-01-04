@@ -16,7 +16,11 @@ export function videoCreate(url) {
     fetch(url, {
       method: "POST",
       headers: {
+<<<<<<< HEAD
         "authorization": "Bearer " + config.apiToken,
+=======
+        "authorization": config.apiToken,
+>>>>>>> refs/remotes/origin/master
         "content-type": "application/json"
       }
     }).then((response) => {
