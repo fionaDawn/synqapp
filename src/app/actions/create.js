@@ -16,7 +16,7 @@ export function videoCreate(url) {
     fetch(url, {
       method: "POST",
       headers: {
-        "authorization": config.apiToken,
+        "authorization": "Bearer " + config.apiToken,
         "content-type": "application/json"
       }
     }).then((response) => {

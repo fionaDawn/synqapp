@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 import {videos, videosHaveErrored, videosAreLoading} from './videos';
-import {videoCreate, videoHasErrored, videoIsLoading} from './create';
+import {video, videoHasErrored, videoIsLoading} from './create';
 
 export default combineReducers({
-  videoCreate,
+  video,
   videoHasErrored,
   videoIsLoading,
   videos,

@@ -15,7 +15,7 @@ export function videosFetchData(url) {
     dispatch(videosAreLoading(true));
     fetch(url, {
       headers: {
-        "authorization": config.apiToken
+        "authorization": "Bearer " + config.apiToken
       }
     }).then((response) => {
       if (!response.ok) {

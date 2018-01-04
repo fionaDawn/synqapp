@@ -23,9 +23,9 @@ class SynqUploadButton extends Component {
       return <p>Loading…</p>;
     }
 
-    if (this.props.videoId) {
+    if (this.props.video.id) {
       return (<div>
-        <Iframe url={this.props.uploaderUrl + this.props.videoId} width="450px" height="350px" display="initial" position="relative"/>
+        <Iframe url={this.props.uploaderUrl + this.props.video.id + "?token=" + this.props.token} width="450px" height="350px" display="initial" position="relative"/>
       </div>);
     } else {
       return (<div>
@@ -37,7 +37,7 @@ class SynqUploadButton extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {videoId: state.video, hasErrored: state.videoHasErrored, isLoading: state.videoIsLoading};
+  return {video: state.video, hasErrored: state.videoHasErrored, isLoading: state.videoIsLoading};
 };
 
 const mapDispatchToProps = (dispatch) => {

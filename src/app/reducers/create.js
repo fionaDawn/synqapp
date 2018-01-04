@@ -14,7 +14,7 @@ export function videoIsLoading(state = false, action) {
       return state;
   }
 }
-export function videoCreate(state = [], action) {
+export function video(state = {}, action) {
   switch (action.type) {
     case 'VIDEOS_CREATE_SUCCESS':
       return action.video;
