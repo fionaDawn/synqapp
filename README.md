@@ -2239,7 +2239,7 @@ First create file src/app/config.js. Contents shoule be:
 export const config = {
   uploaderUrl: <uploader_url>,
   apiUrl: <apiUrl>,
-  apiToken: "Bearer <apiToken>"
+  apiToken: <apiToken>
 }
 ```
 
