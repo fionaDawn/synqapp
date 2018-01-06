@@ -27,11 +27,7 @@ class App extends Component {
         <MuiThemeProvider muiTheme={muiTheme}>
           <div>
             <AppBar showMenuIconButton={false} title="Synq Upload"/>
-<<<<<<< HEAD
             <SynqUploadButton apiUrl={apiUrl} uploaderUrl={config.uploaderUrl} token={config.apiToken}/>
-=======
-            <SynqUploadButton apiUrl={apiUrl} uploaderUrl={config.uploaderUrl}/>
->>>>>>> refs/remotes/origin/master
             <SynqGallery apiUrl={apiUrl}/>
           </div>
         </MuiThemeProvider>

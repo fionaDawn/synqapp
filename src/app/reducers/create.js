@@ -14,11 +14,7 @@ export function videoIsLoading(state = false, action) {
       return state;
   }
 }
-<<<<<<< HEAD
 export function video(state = {}, action) {
-=======
-export function videoCreate(state = [], action) {
->>>>>>> refs/remotes/origin/master
   switch (action.type) {
     case 'VIDEOS_CREATE_SUCCESS':
       return action.video;
